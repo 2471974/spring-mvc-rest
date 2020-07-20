@@ -1,4 +1,4 @@
-package guru.spring.mvcrest.controllers.v1;
+package guru.spring.mvcrest.api.v1.controllers;
 
 import guru.spring.mvcrest.api.v1.model.CategoryDTO;
 import guru.spring.mvcrest.api.v1.model.CategoryListDTO;
@@ -9,10 +9,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-@RequestMapping("/api/v1/categories")
+//@RequestMapping("/api/v1/customers")
+@RequestMapping(CategoryController.BASE_URL)
 public class CategoryController {
+
+    public static final String BASE_URL = "/api/v1/categories";
 
     private final CategoryService categoryService;
 
